@@ -62,7 +62,7 @@ pruned <- prune(mtree, cp = bestcp)
 # Plot pruned tree
 prp(pruned, faclen = 0, cex = 0.8, extra = 1)
 
-# confusion matrix (training data)
+# confusion matrix (training data) confusion matrix is the one of thebest metric to evaluate the model
 conf.matrix <- table(train$Species, predict(pruned,type="class"))
 rownames(conf.matrix) <- paste("Actual", rownames(conf.matrix), sep = ":")
 colnames(conf.matrix) <- paste("Pred", colnames(conf.matrix), sep = ":")
